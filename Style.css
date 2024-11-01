@@ -1,0 +1,51 @@
+body{
+    background-size:cover;
+    background-position:top;
+    background-image: url("Image/LoginBG.jpg");
+}
+.loginplace{
+    width: 25%;
+    height: 550px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px;
+    border-color: black;
+    border-radius: 10px;
+    margin-top: 12%;
+    padding: 30px;
+}
+.logo{
+    margin-top: 25px;
+    width: 200px;
+    height: 200px;
+}
+.usernamedesing{
+    margin-top: 25px;
+    width: 300px;
+    height: 30px;
+    border-radius: 15px;
+}
+.passworddesing{
+    margin-top: 25px;
+    width: 300px;
+    height: 30px;
+    border-radius: 15px;
+}
+.Loginbtn{
+    margin-top: 50px;
+    width: 270px;
+    height: 55px;
+    border-radius: 15px;
+    font-size: 27px;
+    font-weight: bolder;
+    color: rgb(236, 198, 176);
+    background-color: rgb(160, 100, 66);
+    border: 1.5px;
+    font-family: Roboto Mono;
+}
+.regist{
+    color: rgb(160, 100, 66);
+}
+p{
+    font-size: 18px;
+    font-family: Roboto Mono;
+}
