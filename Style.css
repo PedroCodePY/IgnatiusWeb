@@ -8,10 +8,11 @@
     background-image: url("LoginBG.jpg");
     background-size: cover;
     background-position: center;
+    align-content: center;
 }
 .loginplace{
-    width: 40%;
-    height: 28%;
+    width: 21%;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
 }
@@ -21,16 +22,24 @@
     height: 200px;
 }
 .usernamedesing{
-    margin-top: 10%;
-    width: 75%;
-    height: 32px;
+    margin-top: 5%;
+    width: 72%;
+    height: 35px;
     border-radius: 15px;
+    color: rgb(160, 100, 66);
+    font-family: "Roboto Mono";
+    border-color: rgba(160, 100, 66, 0.5);
+    border-style:solid;
 }
 .passworddesing{
     margin-top: 2%;
-    width: 75%;
-    height: 32px;
+    width: 72%;
+    height: 35px;
     border-radius: 15px;
+    color: rgb(160, 100, 66);
+    font-family: "Roboto Mono";
+    border-color: rgba(160, 100, 66,  0.5);
+    border-style:solid;
 }
 .Loginbtn{
     margin-top: 7%;
@@ -57,5 +66,5 @@
     margin-top: 4%;
     font-size:small;
     font-family: Roboto Mono;
-    padding-bottom: 2%;
+    padding-bottom: 3%;
 }

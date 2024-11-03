@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Main{
+    width: 100%;
+    height: 100vh;
+    background-image: url("LoginBG.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.btnplace{
+    width: 40%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.411);
+    border-radius: 10px;
+    padding: 1%;
+    align-items: center;
+}
+.titleplace{
+    width: 40%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.411);
+    border-radius: 10px;
+    padding: 1%;
+    align-items: center;
+}
+h1{
+    font-family: "Roboto Mono";
+    color: rgb(160, 100, 66);
+}
+h4{
+    font-family: "Roboto Mono";
+    color: rgb(160, 100, 66);
+}
+.btn{
+    background-color: rgba(255, 255, 255, 0);
+    width: 40%;
+    height: 60px;
+    font-family: "Roboto Mono";
+    font-size: large;
+    border-radius: 10px;
+    border-color: rgb(160, 100, 66);
+    border-style:solid;
+}
+.logo{
+    width: 15%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    color: rgb(160, 100, 66);
+}
+.Copyright{
+    margin-top: 2%;
+    font-size:small;
+    font-family: "Roboto Mono";
+    padding-bottom: 1%;
+}
