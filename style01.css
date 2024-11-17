@@ -26,22 +26,27 @@
     align-items: center;
 }
 h1{
-    font-family: "Roboto Mono";
+    font-family: "Poppins";
     color: rgb(160, 100, 66);
 }
 h4{
-    font-family: "Roboto Mono";
+    font-family: "Poppins";
     color: rgb(160, 100, 66);
 }
 .btn{
     background-color: rgba(255, 255, 255, 0);
     width: 40%;
     height: 60px;
-    font-family: "Roboto Mono";
+    font-family: "Poppins";
     font-size: large;
     border-radius: 10px;
     border-color: rgb(160, 100, 66);
     border-style:solid;
+    transition: transform 0.5, ease;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.05);
 }
 .logo{
     width: 15%;
@@ -54,6 +59,6 @@ a{
 .Copyright{
     margin-top: 2%;
     font-size:small;
-    font-family: "Roboto Mono";
+    font-family: "Poppins";
     padding-bottom: 1%;
 }

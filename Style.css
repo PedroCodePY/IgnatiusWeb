@@ -11,39 +11,69 @@
     align-content: center;
 }
 .loginplace{
-    width: 21%;
+    width: 25%;
     height: auto;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
+    align-items: center;
 }
 .logo{
-    margin-top: 10%;
-    width: 200px;
-    height: 200px;
-}
-.usernamedesing{
     margin-top: 5%;
-    width: 72%;
+    margin-bottom: 5%;
+    width: 45%;
+    height: auto;
+}
+.user{
+    width: 80%;
+    background-color: white;
+    display: flex;
     height: 35px;
-    border-radius: 15px;
-    color: rgb(160, 100, 66);
-    font-family: "Roboto Mono";
+    padding-left: 2%;
+    padding-right: 0;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    align-items: center;
     border-color: rgba(160, 100, 66, 0.5);
     border-style:solid;
+    border-radius: 15px;
+}
+.userimg{
+    height: 20px;
+    width: 20px;
+    margin-right: 2%;
+}
+.passimg{
+    height: 20px;
+    width: 20px;
+    margin-right: 2%;
+}
+.usernamedesing{
+    width: 87%;
+    height: 35px;
+    color: #a06442;
+    font-family: "Poppins";
+    font-size: medium;
+    outline-style: none;
+    padding-left: 3px;
+    border: 0;
+    padding-right: 0;
+    margin-right: 0;
 }
 .passworddesing{
-    margin-top: 2%;
-    width: 72%;
+    width: 87%;
     height: 35px;
-    border-radius: 15px;
     color: rgb(160, 100, 66);
-    font-family: "Roboto Mono";
-    border-color: rgba(160, 100, 66,  0.5);
-    border-style:solid;
+    font-family: "Poppins";
+    font-size: medium;
+    outline-style: none;
+    padding-left: 3px;
+    border: 0;
+    padding-right: 0;
+    margin-right: 0;
 }
 .Loginbtn{
     margin-top: 7%;
-    width: 270px;
+    width: 65%;
     height: 55px;
     border-radius: 15px;
     font-size: 27px;
@@ -51,7 +81,16 @@
     color: rgb(236, 198, 176);
     background-color: rgb(160, 100, 66);
     border: 1.5px;
-    font-family: Roboto Mono;
+    font-family: "Poppins";
+    transition: transform 0.5, ease;
+    cursor: pointer;
+}
+.Loginbtn:hover{
+    transform: scale(1.05);
+}
+a{
+    text-decoration: none;
+    color: rgb(236, 198, 176);;
 }
 .regist{
     color: rgb(160, 100, 66);
@@ -60,11 +99,12 @@
 .paragraf{
     margin-top: 3%;
     font-size:medium;
-    font-family: Roboto Mono;
+    font-family: "Poppins";
 }
 .Copyright{
     margin-top: 4%;
     font-size:small;
     font-family: Roboto Mono;
     padding-bottom: 3%;
+    cursor: default;
 }
