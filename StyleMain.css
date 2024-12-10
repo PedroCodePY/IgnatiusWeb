@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+.Main{
+    width: 100%;
+    height: 100vh;
+    align-content: center;
+    display: flex;
+}
+.Menu{
+    width: 20%;
+    height: 100%;
+    background-color: #363740;
+    align-items: center;
+}
+.logo{
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 60%;
+    height: auto;
+}
+.Profile{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    height: 100px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    justify-content: end;
+    padding-top: 1%;
+    border-color: rgba(255, 24, 24, 0);
+    border-style:solid;
+}
+h3{
+    text-align: end;
+    margin-right: 2%;
+}
+.badge{
+    background-color: rgba(192, 192, 192, 0);
+    border-radius: 25px;
+    color: white;
+    font-weight: normal;
+}
+i img{
+    height: 25px;
+    width: auto;
+}
+.user{
+    width: 50px;
+    height: 50px;
+    margin-left: 1%;
+}
+.nav .nav-item a img{
+    width: 25px;
+    height: 25px;
+    margin-right: 5%;
+    margin-left: 1%;
+}
+.nav .nav-item a{
+    text-align: start;
+    font-size: 25px;
+    font-weight: bold;
+}
+.nav .nav-item{
+    width: 100%;
+}
+.nav .nav-item .nav-link{
+    color: #a06442;
+    margin-top: 5%;
+}
+.nav .nav-item .nav-link.active{
+    background-color: #3f4049;
+    border-left: 4px solid;
+    color: #a06442;
+}
+.display2{
+    width: 80%;
+}
+.content{
+    margin-top: 2%;
+    width: 100%;
+}
+.card-text{
+    text-align: center;
+}
