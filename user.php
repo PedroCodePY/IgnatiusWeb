@@ -37,7 +37,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="data.php">
+            <a class="nav-link" aria-current="page" href="#">
               <i><img src="data-analytics.png" /></i>
               DATA
             </a>
@@ -49,31 +49,9 @@
             </a>
           </li>
           <br />
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="addUser.html">
-              <i><img src="add-user.png" /></i>
-              Add User
-            </a>
-          </li>
-          <br />
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="addfamily.php">
-              <i><img src="join.png" /></i>
-              Add Family
-            </a>
-          </li>
-          <br />
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="addUser.html">
-              <i><img src="remove.png" /></i>
-              Remove Family
-            </a>
-          </li>
-          <br />
-          <br />
           <br />
           <li class="nav-item logout" type="button" id="signoutbtn">
-            <a class="nav-link">
+            <a class="nav-link" href="Login.html">
               <i><img src="sign-out-alt.png" /></i>
               Log Out
             </a>
@@ -82,14 +60,13 @@
       </center>
     </div>
     <div class="display2">
-      <p name="email" id="email"></p>
       <div class="Profile">
         <div class="text">
-          <h3 name="name">
-            <strong>Pedro</strong>
+          <h3>
+            <strong id="Name">Pedro</strong>
           </h3>
         </div>
-        <img name="image" src="user.png" alt="" class="user" />
+        <img src="user.png" alt="" class="user" />
       </div>
       <h2 id="Greet"></h2>
       <div class="content">

@@ -39,7 +39,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">
+                        <a class="nav-link" aria-current="page" href="data.php">
                             <i><img src="data-analytics.png" /></i>
                             DATA
                         </a>

@@ -3,6 +3,7 @@ let UserInfo =  JSON.parse(sessionStorage.getItem("user-info"));
 
 let greet = document.getElementById('Greet');
 let Name = document.getElementById('Name');
+let Email = document.getElementById('email');
 let signoutbtn = document.getElementById('signoutbtn');
 let now = new Date();
 let hours = now.getHours();
@@ -32,6 +33,8 @@ let checkCred = () =>{
         window.location.href = 'index.html';
     }
     else{
+        Email.innerText = UserCreds.email;
+        Email.style.display = 'none';
         Name.innerText = `${UserInfo.firstname + " " + UserInfo.lastname}`;
         greet.innerText = greett + `, ${UserInfo.firstname + " " + UserInfo.lastname}`;
     }
