@@ -15,7 +15,7 @@
         rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
         crossorigin="anonymous" />
-    <title>Data</title>
+    <title>User Management</title>
     <link rel="icon" type="image/icon" href="Logo.ico" />
     <link rel="stylesheet" href="data.css">
 </head>
@@ -39,7 +39,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">
+                        <a class="nav-link" aria-current="page" href="data.php">
                             <i><img src="data-analytics.png" /></i>
                             DATA
                         </a>
@@ -69,7 +69,7 @@
                     </li>
                     <br />
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="userManagement.php">
+                        <a class="nav-link active" aria-current="page" href="#">
                             <i><img src="profile.png" /></i>
                             User Management
                         </a>
@@ -87,47 +87,21 @@
             </center>
         </div>
         <div class="display2">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <div class="chart1">
-                            <canvas id="chart1" class="classChart1"></canvas>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="chart1">
-                            <canvas id="chart2" class="classChart2"></canvas>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="chart1">
-                            <canvas id="chart3" class="classChart3"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="card">
                 <?php
                 $conn = mysqli_connect("localhost", "root", "", "ignatius_data");
-                $query = "SELECT * FROM statistik_umat";
+                $query = "SELECT * FROM status";
                 $query_run = mysqli_query($conn, $query);
                 ?>
                 <table class="table table-hover">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Nama Keluarga</th>
-                            <th>Ayah</th>
-                            <th>Ibu</th>
-                            <th>B 1sd/12 L</th>
-                            <th>B 1sd/12 P</th>
-                            <th>B 13sd/16 L</th>
-                            <th>B 13sd/16 P</th>
-                            <th>B 16+ L</th>
-                            <th>B 16+ P</th>
-                            <th>L</th>
-                            <th>P</th>
-                            <th>Total</th>
+                            <th>Name</th>
+                            <th>Developer</th>
+                            <th>User</th>
+                            <th>Admin</th>
+                            <th>Warning</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -140,41 +114,20 @@
                         ?>
                                 <tr>
                                     <td>
-                                        <center><?php echo $row['ID']; ?></center>
+                                        <?php echo $row['ID']; ?>
                                     </td>
-                                    <td><?php echo $row['Nama Keluarga']; ?></td>
+                                    <td><?php echo $row['Name']; ?></td>
                                     <td>
-                                        <center><?php echo $row['Ayah']; ?></center>
-                                    </td>
-                                    <td>
-                                        <center><?php echo $row['Ibu']; ?></center>
+                                        <?php echo $row['Developer']; ?>
                                     </td>
                                     <td>
-                                        <center><?php echo $row['B 1sd/ 12 L']; ?></center>
+                                        <?php echo $row['User']; ?>
                                     </td>
                                     <td>
-                                        <center><?php echo $row['B 1sd/ 12 P']; ?></center>
+                                        <?php echo $row['Admin']; ?>
                                     </td>
                                     <td>
-                                        <center><?php echo $row['B 13sd/ 16 L']; ?></center>
-                                    </td>
-                                    <td>
-                                        <center><?php echo $row['B 13sd/ 16 P']; ?></center>
-                                    </td>
-                                    <td>
-                                        <center><?php echo $row['B 16+ L']; ?></center>
-                                    </td>
-                                    <td>
-                                        <center><?php echo $row['B 16+ P']; ?></center>
-                                    </td>
-                                    <td>
-                                        <center><?php echo $row['L']; ?></center>
-                                    </td>
-                                    <td>
-                                        <center><?php echo $row['P']; ?></center>
-                                    </td>
-                                    <td>
-                                        <center><?php echo $row['Total']; ?></center>
+                                        <?php echo $row['Warning']; ?>
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-outline-success">Edit</button>

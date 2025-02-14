@@ -64,9 +64,9 @@
           </li>
           <br />
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="addUser.html">
-              <i><img src="remove.png" /></i>
-              Remove Family
+            <a class="nav-link" aria-current="page" href="userManagement.php">
+              <i><img src="profile.png" /></i>
+              User Management
             </a>
           </li>
           <br />
@@ -82,14 +82,42 @@
       </center>
     </div>
     <div class="display2">
-      <p name="email" id="email"></p>
       <div class="Profile">
         <div class="text">
-          <h3 name="name">
+          <h3 id="name">
             <strong>Pedro</strong>
           </h3>
+          <?php
+          $Name = urldecode($_COOKIE['variable']);
+          $family = 0;
+          $Anak2 = 0;
+          $Remaja = 0;
+          $Dewasa = 0;
+          $conn = mysqli_connect("localhost", "root", "", "ignatius_data");
+          $query = "SELECT * FROM status WHERE Name = '$Name'";
+          $query2 = "SELECT * FROM statistik_umat";
+          $result = mysqli_query($conn, $query);
+          $result2 = mysqli_query($conn, $query2);
+          if (mysqli_num_rows($result) > 0) {
+            foreach ($result as $row) {
+          ?>
+
+              <span class="badge">
+                <?php
+                if ($row["Developer"] = "True") {
+                  echo "<i><img src='code.png'></i>w";
+                }
+                if ($row["Admin"] = "True") {
+                  echo "<i><img src='crown.png'></i>";
+                }
+                ?>
+              </span>
+          <?php
+            }
+          }
+          ?>
         </div>
-        <img name="image" src="user.png" alt="" class="user" />
+        <img class="user" src="user.png" alt="">
       </div>
       <h2 id="Greet"></h2>
       <div class="content">
@@ -99,43 +127,68 @@
               <div class="card text-center mb-3" style="width: 18rem">
                 <div class="card-body">
                   <h5 class="card-title">Keluarga</h5>
-                  <h3 class="card-text">60</h3>
+                  <?php
+                  if (mysqli_num_rows($result2) > 0) {
+                    foreach ($result2 as $row) {
+                      $family = $row["ID"];
+                    }
+                  ?><h3 class="card-text"><?php echo $family ?></h3>
+                  <?php
+                  }
+                  ?>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card text-center mb-3" style="width: 18rem">
                 <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Anak-anak</h5>
+                  <?php
+                  if (mysqli_num_rows($result2) > 0) {
+                    foreach ($result2 as $row) {
+                      $Anak2 = $Anak2 + $row["B 1sd/ 12 L"];
+                      $Anak2 = $Anak2 + $row["B 1sd/ 12 P"];
+                    }
+                  ?><h3 class="card-text"><?php echo $Anak2 ?></h3>
+                  <?php
+                  }
+                  ?>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card text-center mb-3" style="width: 18rem">
                 <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Remaja</h5>
+                  <?php
+                  if (mysqli_num_rows($result2) > 0) {
+                    foreach ($result2 as $row) {
+                      $Remaja = $Remaja + $row["B 13sd/ 16 L"];
+                      $Remaja = $Remaja + $row["B 13sd/ 16 P"];
+                    }
+                  ?><h3 class="card-text"><?php echo $Remaja ?></h3>
+                  <?php
+                  }
+                  ?>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card text-center mb-3" style="width: 18rem">
                 <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">
-                    With supporting text below as a natural lead-in to
-                    additional content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Dewasa</h5>
+                  <?php
+                  if (mysqli_num_rows($result2) > 0) {
+                    foreach ($result2 as $row) {
+                      $Dewasa = $Dewasa + $row["B 16+ L"];
+                      $Dewasa = $Dewasa + $row["B 16+ P"];
+                      $Dewasa = $Dewasa + $row["Ayah"];
+                      $Dewasa = $Dewasa + $row["Ibu"];
+                    }
+                  ?><h3 class="card-text"><?php echo $Dewasa ?></h3>
+                  <?php
+                  }
+                  ?>
                 </div>
               </div>
             </div>

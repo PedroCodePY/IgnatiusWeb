@@ -23,45 +23,45 @@ let email = document.getElementById('username');
 let password = document.getElementById('password');
 let LoginForm = document.getElementById('LoginForm');
 let hideshow = document.getElementById('ShowHide');
-let txt ='"Kedermawanan dan kebaikan yang tidak berlandaskan kebenaran bukanlah kedermawanan dan kebaikan, melainkan tipu daya dan kesia-siaan."';
+let txt = '"Kedermawanan dan kebaikan yang tidak berlandaskan kebenaran bukanlah kedermawanan dan kebaikan, melainkan tipu daya dan kesia-siaan."';
 let person1 = " St.Ignatius de Loyola";
 let i = 0;
 let y = 0;
 let k = 0;
 
 let SignInUser = evt => {
-  if (k < 5){
+  if (k < 5) {
     evt.preventDefault();
     signInWithEmailAndPassword(auth, email.value, password.value)
-    .then((credentials)=>{
-      get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot)=>{
-        if(snapshot.exists){
-          sessionStorage.setItem("user-info", JSON.stringify({
-            firstname: snapshot.val().firstname,
-            lastname: snapshot.val().lastname,
-            real_email: snapshot.val().real_email,
-            account_type: snapshot.val().account_type
-          }))
-          sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
-          if (snapshot.val().account_type != "admin") {
-            window.location.href = 'user.php';
+      .then((credentials) => {
+        get(child(dbref, 'UserAuthList/' + credentials.user.uid)).then((snapshot) => {
+          if (snapshot.exists) {
+            sessionStorage.setItem("user-info", JSON.stringify({
+              firstname: snapshot.val().firstname,
+              lastname: snapshot.val().lastname,
+              real_email: snapshot.val().real_email,
+              account_type: snapshot.val().account_type
+            }))
+            sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
+            if (snapshot.val().account_type != "admin") {
+              window.location.href = 'user.php';
+            }
+            else {
+              window.location.href = 'main.php';
+            }
           }
-          else{
-            window.location.href = 'main.php';
-          }
-        }
+        })
       })
-    })
-    .catch((error)=>{
-      Error.style.display = 'block';
-      k++;
-      if (k  == 5) {
-        window.location.href = 'blocked.html';
-      }
-      console.log(k);
-      console.log(error.code);
-      console.log(error.message);
-    })
+      .catch((error) => {
+        Error.style.display = 'block';
+        k++;
+        if (k == 5) {
+          window.location.href = 'blocked.html';
+        }
+        console.log(k);
+        console.log(error.code);
+        console.log(error.message);
+      })
   }
 }
 
@@ -72,10 +72,10 @@ async function initialize() {
 function showhidepass() {
   if (password.type === "password") {
     password.type = "text";
-    hideshow.src='hidden.png';
+    hideshow.src = 'hidden.png';
   } else {
     password.type = "password";
-    hideshow.src='eye.png';
+    hideshow.src = 'eye.png';
   };
 };
 
@@ -93,6 +93,21 @@ function person() {
     setTimeout(person, 50);
   };
 }
+
+fetch('main.php', {
+  method: 'POST', // or 'GET'
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded' // For form data
+  },
+  body: 'variable=' + encodeURIComponent(email) // Send data as form data
+})
+  .then(response => response.text()) // Get the response from PHP
+  .then(data => {
+    console.log('Response from PHP:', data); // Process the response
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 
 addEventListener("load", initialize);
 addEventListener("load", Write);
