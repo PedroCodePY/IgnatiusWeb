@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+img{
+    width: 100px;
+    height: auto;
+}
+.main{
+    text-align: center;
+}
+.title{
+    margin-top: 1%;
+    align-items: center;
+}
+.content{
+    width: 98%;
+    margin-top: 2%;
+    text-align: start;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.content p{
+    font-size: x-large;
+}
